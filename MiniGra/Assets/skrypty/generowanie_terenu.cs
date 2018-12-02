@@ -40,19 +40,18 @@ public class generowanie_terenu : MonoBehaviour {
 
 		//punkty.transform.position.z = odlegloscint;
 
-		if (Gracz.transform.position.x+10 > x) {
+		if (Gracz.transform.position.x+30 > x) {
+
 
 			x += Random.Range (a, b);
 			y += Random.Range (c, d);
 
-			xx=x+Gracz.transform.position.x / 20;
 
+			xx=(x+Gracz.transform.position.x / 20);
 		
-			Instantiate(Platforma_1, new Vector2 (xx,y), Quaternion.identity);
-
-
-
-
+	
+		
+			Instantiate (Platforma_1, new Vector2 (xx, y), Quaternion.identity);
 		}
 
 

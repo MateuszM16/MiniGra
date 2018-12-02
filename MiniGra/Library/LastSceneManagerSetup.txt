@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/sceny/gra.unity
+- path: C:/Users/mati9/Desktop/gra/Game/Assets/scena1.unity
   isLoaded: 1
   isActive: 1
