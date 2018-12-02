@@ -16,7 +16,7 @@ public class newgame : MonoBehaviour {
 	{
 		normalizedMenuArea = new Rect(menuArea.x * Screen.width - (menuArea.width * 0.5f),
 			menuArea.y * Screen.height - (menuArea.height * 0.5f),
-			menuArea.width, menuArea.height);	
+			menuArea.width, menuArea.height);
 	}
 
 	void OnGUI() 
@@ -25,10 +25,11 @@ public class newgame : MonoBehaviour {
 
 		GUI.BeginGroup(normalizedMenuArea);
 		if(GUI.Button(new Rect(playButton), "Play")) {
+			Destroy(GameObject.Find("Odleglosc"));
 			Application.LoadLevel(0);	
 		}
 
-		if(GUI.Button(new Rect(scoreButton), "Score")) {
+		if(GUI.Button(new Rect(scoreButton), "")) {
 			Application.LoadLevel("Scores");	
 		}
 
@@ -38,5 +39,7 @@ public class newgame : MonoBehaviour {
 		}
 		GUI.EndGroup();
 	}
+
+
 
 }

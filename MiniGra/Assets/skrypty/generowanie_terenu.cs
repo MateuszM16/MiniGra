@@ -20,6 +20,9 @@ public class generowanie_terenu : MonoBehaviour {
 
 	public Text odleglosc;
 
+	int odlegloscint;
+
+
 	// Use this for initialization
 	void Start () {
 
@@ -32,9 +35,11 @@ public class generowanie_terenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		odlegloscint = Mathf.RoundToInt (Gracz.transform.position.x);
+		odleglosc.text = "Distance: " + odlegloscint;
 
-		odleglosc.text = "odleglosc: " + Mathf.Round( Gracz.transform.position.x);
-	
+		//punkty.transform.position.z = odlegloscint;
+
 		if (Gracz.transform.position.x+10 > x) {
 
 			x += Random.Range (a, b);
